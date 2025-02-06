@@ -4,10 +4,22 @@ import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() =>{
+    const checkScroll  = () => {
+      setIsFixed(window.scrollY > 100);
+    };
+
+    checkScroll();
+
+    window.addEventListener('scroll', checkScroll );
+    return() => window.removeEventListener('scroll', checkScroll )
+  }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle mobile menu
+    setIsMenuOpen(!isMenuOpen);
   };
 
 const pathname = usePathname();
@@ -25,7 +37,7 @@ useEffect (() => {
 
   return (
     <>
-      <header className='absolute top-0 left-0 w-full mt-6 z-10'>
+      <header className={`absolute top-0 left-0 w-full mt-6 z-10 ${isFixed ? "fixed top-0 left-0 z-50" : ""}`}>
           <div className='container mx-auto max-w-7xl'>
               <div className='main_header flex items-center justify-between'>
                   <div className='site_log block'>

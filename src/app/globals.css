@@ -416,6 +416,17 @@ h4 {font-family: var(--fonts-moondance)}
 .mobileheader {
   display: none;
 }
+
+header.fixed {
+  background: #212428;
+  position: fixed;
+  margin: 0;
+  background-color: rgba(33, 36, 40, .8705882352941177);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  padding: 10px 0;
+  backdrop-filter: blur(15px);
+}
+
 @media (min-width: 0px) and (max-width: 767px){
 .mobileheader {display: block; border-bottom: solid 1px #cccccc36;}  
 header {display: none;}

@@ -8,6 +8,7 @@ import whatsapp from '../assets/images/whatsapp.png';
 import atom from '../assets/images/react.png';
 import wordpress from '../assets/images/wordpress.png';
 import photoshop from '../assets/images/photoshop.png';
+import Socialmedialink from './Enviroment/Socialmedialink';
 
 const Banner: React.FC = () => {
 const words = ["Web Developer", "Professional Coder.", "Designer."];
@@ -60,9 +61,9 @@ return () => clearTimeout(typingTimeout);
                                 <div className='social_media'>
                                 <p>FIND WITH ME</p>
                                     <ul className='hero_icons list-insidelist-none p-0 inline-flex space-x-4 mt-5'>
-                                        <li><a href='#'><Image src={linkedin} alt='Icons'/></a></li>
-                                        <li><a href='#'><Image src={github} alt='Icons'/></a></li>
-                                        <li><a href='#'><Image src={whatsapp} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[1].linkedinlink} target="_blank" rel="noopener noreferrer"><Image src={linkedin} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[2].githublink} target="_blank" rel="noopener noreferrer"><Image src={github} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[3].whatsapplink} target="_blank" rel="noopener noreferrer"><Image src={whatsapp} alt='Icons'/></a></li>
                                     </ul>
                                 </div>
                                 <div className='social_media'>

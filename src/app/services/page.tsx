@@ -25,7 +25,7 @@ const page: React.FC = () => {
         </div>
       </div>
         <div className='service-area px-[15px]'>
-            <div className='max-w-7xl my-14 mx-auto' data-aos="fade-left">
+            <div className='max-w-7xl my-14 mx-auto'>
                 <div className='grid grid-cols-3 gap-4 mt-12'>
                     {Servicecontet.map((cards, index) => {
                         return(

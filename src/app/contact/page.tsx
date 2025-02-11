@@ -22,7 +22,7 @@ const page: React.FC = () => {
         </div>
       </div>
       <div className='InnerContact px-[15px]'>
-        <div className='max-w-5xl my-14 mx-auto' data-aos="fade-left">
+        <div className='max-w-5xl my-14 mx-auto'>
             <div className='innerhome_form'>
                 <div className='main_form p-5 rounded-lg relative'>
                     <form>

@@ -43,7 +43,7 @@ const closepopup = (e: { preventDefault: () => void; }) => {
       </div>
       <div className='portfolio_area px-[15px]'>
         <div className='max-w-7xl my-14 mx-auto'>
-            <div className='grid grid-cols-3 gap-4 mt-12' data-aos="fade-left">
+            <div className='grid grid-cols-3 gap-4 mt-12'>
                 {PortfolioCr.map((project, index) => {
                     return(
                         <div className='project_card p-5 rounded-lg' key={index} onClick={() => handleProjectClick(project.id)}>

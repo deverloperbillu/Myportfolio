@@ -23,7 +23,7 @@ const Contactus = () => {
                 <div className='home_form mt-14'>
                     <div className='flex flex-wrap md:flex-nowrap gap-8'>
                         <div className='w-full md:w-1/3'>
-                            <div className='contact-about-area p-5 rounded-lg relative' data-aos="fade-left">
+                            <div className='contact-about-area p-5 rounded-lg relative'>
                                 <div className='thumb'>
                                     <Image src={contactImage} alt='Contact Image' className='w-full h-full rounded-lg' />
                                 </div>
@@ -47,7 +47,7 @@ const Contactus = () => {
                             </div>
                         </div>
                         <div className='w-full h-full md:w-2/3'>
-                            <div className='main_form p-5 rounded-lg relative' data-aos="fade-right">
+                            <div className='main_form p-5 rounded-lg relative'>
                                 <form>
                                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                                         <div className='form_control'>

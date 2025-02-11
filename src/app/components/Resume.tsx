@@ -45,7 +45,7 @@ const Resume: React.FC = () => {
                 <div className="tabs-content">
                     {activeTab === "Tab1" && 
                         <div className="timeline relative">
-                            <div className='inner_heading mb-10 mt-14' data-aos="fade-left">
+                            <div className='inner_heading mb-10 mt-14'>
                                 <span className="text-[#f9004d] block tracking-[.25em] uppercase text-sm">2012 - 2017</span>
                                 <h2 className="text-[36px] text-[#c4cfde] font-semibold">Education Quality</h2>
                             </div>
@@ -74,7 +74,7 @@ const Resume: React.FC = () => {
                     }
                     {activeTab === "Tab2" && 
                     <div>
-                        <div className='inner_heading mb-10 mt-14' data-aos="fade-left">
+                        <div className='inner_heading mb-10 mt-14'>
                                 <span className="text-[#f9004d] block tracking-[.25em] uppercase text-sm">Features</span>
                                 <h2 className="text-[36px] text-[#c4cfde] font-semibold">Development Skills</h2>
                             </div>
@@ -142,7 +142,7 @@ const Resume: React.FC = () => {
                     {activeTab === "Tab3" && 
                     <div>
                         <div className="timeline relative">
-                            <div className='inner_heading mb-10 mt-14' data-aos="fade-left">
+                            <div className='inner_heading mb-10 mt-14'>
                                 <span className="text-[#f9004d] block tracking-[.25em] uppercase text-sm">2019 - Present</span>
                                 <h2 className="text-[36px] text-[#c4cfde] font-semibold">Job Experience</h2>
                             </div>

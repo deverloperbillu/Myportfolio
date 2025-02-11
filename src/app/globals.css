@@ -445,6 +445,8 @@ header.fixed {
   background-position: center;
 }
 
+.main_banner {overflow:hidden;}
+
 @media (min-width: 0px) and (max-width: 767px){
 .mobileheader {display: block; border-bottom: solid 1px #cccccc36;}  
 header {display: none;}
@@ -506,4 +508,5 @@ header {padding: 0 15px;}
 .work_flow .grid .flowBox{border:solid 1px #cccccc36;padding:10px}
 .work_flow .grid .flowBox:before{content:"";display:block;position:absolute;width:20px;height:20px;background:#f9004d;border-radius:50px;bottom:-10px;left:-10px}
 .work_flow .grid .flowBox:after{content:"";display:block;position:absolute;width:20px;height:20px;background:#f9004d;border-radius:50px;bottom:-10px;right:-10px}
+.about_resume {margin-top: 30px;}
 }

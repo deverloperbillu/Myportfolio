@@ -21,12 +21,12 @@ const [activeTab, setActiveTab] = useState("Tab1");
                 </div>
                 <div className='clients_tabs mt-14'>
                     <div className='flex flex-wrap md:flex-nowrap gap-6'>
-                        <div className='client_tabbutton w-full md:w-1/3 h-full' data-aos="fade-left">
+                        <div className='client_tabbutton w-full md:w-1/3 h-full'>
                             <button className={activeTab === "Tab1" ? "active" : ""} onClick={() => setActiveTab("Tab1")}>Custom Front-End</button>
                             <button className={activeTab === "Tab2" ? "active" : ""} onClick={() => setActiveTab("Tab2")}>Wordpress Websites</button>
                             <button className={activeTab === "Tab3" ? "active" : ""} onClick={() => setActiveTab("Tab3")}>React Web App</button>
                         </div>
-                        <div className="client_tabcontent w-full md:w-2/3" data-aos="fade-right">
+                        <div className="client_tabcontent w-full md:w-2/3">
                             {activeTab === "Tab1" && 
                             <>
                                 <div className="grid grid-cols-3 gap-4">

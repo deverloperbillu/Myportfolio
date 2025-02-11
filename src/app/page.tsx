@@ -6,7 +6,7 @@ import Resume from "./components/Resume";
 import Services from "./components/Services";
 import Workflow from "./components/Workflow";
 import './globals.css';
-
+import 'aos/dist/aos.css';
 export default function Home() {
   return (
     <>

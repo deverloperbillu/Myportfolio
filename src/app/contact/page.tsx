@@ -10,7 +10,7 @@ const innerheadings = {
 const page: React.FC = () => {
   return (
     <>
-    <div className="inner_banner relative bg-cover text-center">
+    <div className="inner_banner relative text-center">
         <div className="mx-auto max-w-7xl">
           <h3 className={innerheadings.innerTitle}>Contact Us</h3>
           <ul className={innerheadings.innerText}>
@@ -22,7 +22,7 @@ const page: React.FC = () => {
         </div>
       </div>
       <div className='InnerContact px-[15px]'>
-        <div className='max-w-5xl my-14 mx-auto'>
+        <div className='max-w-5xl my-14 mx-auto' data-aos="fade-left">
             <div className='innerhome_form'>
                 <div className='main_form p-5 rounded-lg relative'>
                     <form>

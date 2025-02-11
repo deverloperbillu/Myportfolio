@@ -30,7 +30,7 @@ const closepopup = (e: { preventDefault: () => void; }) => {
 };
   return (
     <>
-    <div className="inner_banner relative bg-cover text-center">
+    <div className="inner_banner relative text-center">
         <div className="mx-auto max-w-7xl">
           <h3 className={innerheadings.innerTitle}>Portfolios</h3>
           <ul className={innerheadings.innerText}>
@@ -43,7 +43,7 @@ const closepopup = (e: { preventDefault: () => void; }) => {
       </div>
       <div className='portfolio_area px-[15px]'>
         <div className='max-w-7xl my-14 mx-auto'>
-            <div className='grid grid-cols-3 gap-4 mt-12'>
+            <div className='grid grid-cols-3 gap-4 mt-12' data-aos="fade-left">
                 {PortfolioCr.map((project, index) => {
                     return(
                         <div className='project_card p-5 rounded-lg' key={index} onClick={() => handleProjectClick(project.id)}>

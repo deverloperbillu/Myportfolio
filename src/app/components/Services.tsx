@@ -15,11 +15,11 @@ const limit = 3;
     <>
         <div className='service-area px-[15px]'>
             <div className='max-w-7xl my-14 mx-auto'>
-                <div className='custom_heading'>
+                <div className='custom_heading' data-aos="fade-down">
                     <span className={cstheadings.cstspan}>Features</span>
                     <h2 className={cstheadings.csth2}>What I Do</h2>
                 </div>
-                <div className='grid grid-cols-3 gap-4 mt-12 w-full'>
+                <div className='grid grid-cols-3 gap-4 mt-12 w-full' data-aos="fade-up">
                     {Servicecontet.slice(0, limit).map((cards, index) => {
                         return(
                             <div className='service_box p-5 rounded-lg min-h-[300px] flex flex-col justify-center w-full' key={index}>
@@ -31,7 +31,7 @@ const limit = 3;
                     })}
                  </div>
             </div>
-            <div className='project_btns text-center mt-10 mb-3'>
+            <div className='project_btns text-center mt-10 mb-3' data-aos="fade-down">
                 <CTA link="/services" name="View Services"/>
             </div>
         </div>

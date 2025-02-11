@@ -31,11 +31,11 @@ const limit = 3;
     <>
     <div className='portfolio_area px-[15px]'>
         <div className='max-w-7xl my-14 mx-auto'>
-            <div className='custom_heading text-center'>
+            <div className='custom_heading text-center' data-aos="fade-up">
                 <span className={cstheadings.cstspan}>Visit my portfolio and keep your feedback</span>
                 <h2 className={cstheadings.csth2}>My Portfolio</h2>
             </div>
-            <div className='grid grid-cols-3 gap-4 mt-12'>
+            <div className='grid grid-cols-3 gap-4 mt-12' data-aos="fade-up">
                 {PortfolioCr.slice(0, limit).map((project, index) => {
                     return(
                         <div className='project_card p-5 rounded-lg' key={index} onClick={() => handleProjectClick(project.id)}>
@@ -88,7 +88,7 @@ const limit = 3;
                 </div>
               </div>
             )}
-            <div className='project_btns text-center mt-10 mb-3'>
+            <div className='project_btns text-center mt-10 mb-3' data-aos="fade-up">
               <CTA link="/portfolio" name="View Portfolio"/>
             </div>
         </div>

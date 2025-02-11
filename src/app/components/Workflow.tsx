@@ -57,11 +57,11 @@ const ourWorkflow = [
    <>
     <div className='work_flow px-[15px]'>
         <div className='max-w-7xl my-14 mx-auto'>
-            <div className='custom_heading text-center'>
+            <div className='custom_heading text-center' data-aos="fade-up">
                 <span className={cstheadings.cstspan}>Workflow</span>
                 <h2 className={cstheadings.csth2}>Responsive Designs <br/>Developments</h2>
             </div>
-            <div className='grid grid-cols-3 mt-12'>
+            <div className='grid grid-cols-3 mt-12' data-aos="fade-up">
                 {ourWorkflow.map((work, index) => {
                     return(
                     <div className={`${workflowbox.box} flowBox`} key={index}>

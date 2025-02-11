@@ -9,6 +9,7 @@ import atom from '../assets/images/react.png';
 import wordpress from '../assets/images/wordpress.png';
 import photoshop from '../assets/images/photoshop.png';
 import Socialmedialink from './Enviroment/Socialmedialink';
+import AOS from 'aos';
 
 const Banner: React.FC = () => {
 const words = ["Web Developer", "Professional Coder.", "Designer."];
@@ -42,13 +43,20 @@ const typingTimeout = setTimeout(handleTyping, speed);
 return () => clearTimeout(typingTimeout);
 });
 
+useEffect(() => {
+    AOS.init({
+         duration: 800,
+         once: false,
+       })
+ }, [])
+
   return (
     <>
         <div className='main_banner pt-36 px-[15px]'>
             <div className='mx-auto max-w-7xl'>
                 <div className='grid grid-cols-2 items-center justify-items-end'>
                     <div className='banner_content'>
-                        <div className='inner'>
+                        <div className='inner' data-aos="fade-up">
                             <span className='subtitle block uppercase text-sm font-medium text-[#c4cfde] mb-3.5'>Welcome to my world</span>
                             <h1 className='text-5xl text-white font-bold leading-tight mb-3.5'>Hi, I’m <span className='text-5xl text-[#ff014f]'>Syed Bilal Shahid</span>
                                 <div className='type_text'>
@@ -61,17 +69,17 @@ return () => clearTimeout(typingTimeout);
                                 <div className='social_media'>
                                 <p>FIND WITH ME</p>
                                     <ul className='hero_icons list-insidelist-none p-0 inline-flex space-x-4 mt-5'>
-                                        <li><a href={Socialmedialink[1].linkedinlink} target="_blank" rel="noopener noreferrer"><Image src={linkedin} alt='Icons'/></a></li>
-                                        <li><a href={Socialmedialink[2].githublink} target="_blank" rel="noopener noreferrer"><Image src={github} alt='Icons'/></a></li>
-                                        <li><a href={Socialmedialink[3].whatsapplink} target="_blank" rel="noopener noreferrer"><Image src={whatsapp} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[1].linkedinlink} data-aos="fade-down" data-aos-duration="1000" target="_blank" rel="noopener noreferrer"><Image src={linkedin} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[2].githublink} data-aos="fade-down" data-aos-duration="1000" target="_blank" rel="noopener noreferrer"><Image src={github} alt='Icons'/></a></li>
+                                        <li><a href={Socialmedialink[3].whatsapplink} data-aos="fade-down" data-aos-duration="1000" target="_blank" rel="noopener noreferrer"><Image src={whatsapp} alt='Icons'/></a></li>
                                     </ul>
                                 </div>
                                 <div className='social_media'>
                                 <p>BEST SKILL ON</p>
                                     <ul className='hero_icons list-insidelist-none p-0 inline-flex space-x-4 mt-5'>
-                                        <li><a href='#'><Image src={atom} alt='Icons'/></a></li>
-                                        <li><a href='#'><Image src={wordpress} alt='Icons'/></a></li>
-                                        <li><a href='#'><Image src={photoshop} alt='Icons'/></a></li>
+                                        <li><a href='#' data-aos="fade-down" data-aos-duration="1000"><Image src={atom} alt='Icons'/></a></li>
+                                        <li><a href='#' data-aos="fade-down" data-aos-duration="1000"><Image src={wordpress} alt='Icons'/></a></li>
+                                        <li><a href='#' data-aos="fade-down" data-aos-duration="1000"><Image src={photoshop} alt='Icons'/></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -79,7 +87,7 @@ return () => clearTimeout(typingTimeout);
                     </div>
                     <div className='thumbnail'>
                         <div className='inner_imgs relative block max-w-lg mx-auto'>
-                            <Image className='w-full max-w-md h-full mx-auto' src={self} alt={'My Self'} />
+                            <Image className='w-full max-w-md h-full mx-auto' data-aos="zoom-in-left" data-aos-duration="1000" src={self} alt={'My Self'} />
                         </div>
                     </div>
                 </div>

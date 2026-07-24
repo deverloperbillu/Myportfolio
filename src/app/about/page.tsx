@@ -2,8 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import MySelf from '../assets/images/freelancer-intro.jpg';
-
+import { IMAGES } from '@/lib/images' 
 const innerheadings = {
   innerTitle: 'text-5xl text-[#c4cfde] font-semibold uppercase mb-2 tracking-wide',
   innerText: 'list-insidelist-none p-0 inline-flex space-x-4 text-base text-[#c4cfde]',
@@ -42,7 +41,7 @@ const Page = () => {
                       <p className='text-[#c6c8c9] text-sm font-normal'>Years of<br/> Experience</p>
                     </div>
                     <div className='fit-img'>
-                      <Image src={MySelf} alt='About Image' className='w-full h-full object-cover object-center block rounded-3xl max-w-[400px] mx-auto	' />
+                      <Image src={IMAGES.MySelf} width={400} height={400} alt='About Image' className='w-full h-full object-cover object-center block rounded-3xl max-w-[400px] mx-auto	' />
                     </div>
                 </div>
                 <div className='sm_shape absolute top-[-100px] left-[0px] w-full h-full z-[-1]'>

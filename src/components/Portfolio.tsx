@@ -1,50 +1,42 @@
 "use client";
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import PortfolioCr from '@/components/Enviroment/Ourportfolio/PortfolioCr';
-import PortfolioInnerCr from '@/components/Enviroment/Ourportfolio/PortfolioInnerCr';
+import React, { useState } from 'react'
+import Image from "next/image";
+import PortfolioCr from './Enviroment/Ourportfolio/PortfolioCr';
+import PortfolioInnerCr from './Enviroment/Ourportfolio/PortfolioInnerCr';
+import CTA from './CTA';
 
+const cstheadings = {
+    cstspan: 'text-[#f9004d] block tracking-[.25em] uppercase text-sm',
+    csth2: 'text-[50px] font-bold leading-[3rem] text-[#c4cfde] mt-4 mb-0 leading-none'
+}
 
-const innerheadings = {
-    innerTitle: 'text-5xl text-[#c4cfde] font-semibold uppercase mb-2 tracking-wide',
-    innerText: 'list-insidelist-none p-0 inline-flex space-x-4 text-base text-[#c4cfde]',
-  };
-
-
-const Page: React.FC = () => {
+const Portfolio: React.FC = () => {
 const [selectedProject, setSelectedProject] = useState<typeof PortfolioInnerCr[0] | null>(null);
+const limit = 3;
 
-const handleProjectClick = (projectId: string) => {
-    const project = PortfolioInnerCr.find(proj => proj.id === projectId );
-    if(project){
-        setSelectedProject(project);
-    }else{
+    const handleProjectClick = (projectId: string) => {
+        const project = PortfolioInnerCr.find(proj => proj.id === projectId );
+        if(project){
+            setSelectedProject(project);
+        }else{
+            setSelectedProject(null);
+        }
+        
+    };
+    const closepopup = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
         setSelectedProject(null);
-    }
-    
-};
-const closepopup = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    setSelectedProject(null);
-};
+    };
   return (
     <>
-    <div className="inner_banner relative text-center">
-        <div className="mx-auto max-w-7xl">
-          <h3 className={innerheadings.innerTitle}>Portfolios</h3>
-          <ul className={innerheadings.innerText}>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>Portfolios</li>
-          </ul>
-        </div>
-      </div>
-      <div className='portfolio_area px-[15px]'>
+    <div className='portfolio_area px-[15px]'>
         <div className='max-w-7xl my-14 mx-auto'>
+            <div className='custom_heading text-center'>
+                <span className={cstheadings.cstspan}>Visit my portfolio and keep your feedback</span>
+                <h2 className={cstheadings.csth2}>My Portfolio</h2>
+            </div>
             <div className='grid grid-cols-3 gap-4 mt-12'>
-                {PortfolioCr.map((project, index) => {
+                {PortfolioCr.slice(0, limit).map((project, index) => {
                     return(
                         <div className='project_card p-5 rounded-lg' key={index} onClick={() => handleProjectClick(project.id)}>
                             <span id="get_id" className='hidden'>{project.id}</span>
@@ -96,10 +88,14 @@ const closepopup = (e: { preventDefault: () => void; }) => {
                 </div>
               </div>
             )}
+            <div className='project_btns text-center mt-10 mb-3'>
+              <CTA link="/portfolio" name="View Portfolio"/>
+            </div>
         </div>
     </div>
+    <div className='line h-px w-full max-w-7xl my-14 mx-auto border-[#17191c] border-[1px] border-solid'></div>
     </>
   )
 }
 
-export default Page
+export default Portfolio

@@ -1,12 +1,13 @@
-import Banner from "./components/Banner";
-import Clients from "./components/Clients";
-import Contactus from "./components/Contactus";
-import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
-import Services from "./components/Services";
-import Workflow from "./components/Workflow";
-import './globals.css';
-import 'aos/dist/aos.css';
+import Banner from "@/components/Banner";
+import Clients from "@/components/Clients";
+import Contactus from "@/components/Contactus";
+import Packages from "@/components/Packages";
+import Portfolio from "@/components/Portfolio";
+import Resume from "@/components/Resume";
+import Services from "@/components/Services";
+import Workflow from "@/components/Workflow";
+
+// import 'aos/dist/aos.css';
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
       <Services/>
       <Portfolio/>
       <Resume/>
+      <Packages/>
       <Workflow/>
       <Clients/>
       <Contactus/>

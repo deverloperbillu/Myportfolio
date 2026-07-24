@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Moon_Dance } from "next/font/google"; // Correct font name for Moon Dance
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Montserrat font
 const montserratFont = Montserrat({
@@ -16,7 +17,7 @@ const montserratFont = Montserrat({
 const moonDanceFont = Moon_Dance({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--fonts-moondance",
+  variable: "--fontsmoondance",
 });
 
 export const metadata: Metadata = {

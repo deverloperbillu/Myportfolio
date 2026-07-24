@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import Servicecontet from '../components/Enviroment/ServicesCr/Servicecontent';
+import Servicecontet from '@/components/Enviroment/ServicesCr/Servicecontent';
 
 
 const innerheadings = {
@@ -30,7 +30,7 @@ const page: React.FC = () => {
                     {Servicecontet.map((cards, index) => {
                         return(
                             <div className='service_box p-5 rounded-lg min-h-[300px] flex flex-col justify-center' key={index}>
-                                <Image src={cards.cardIcon} alt='Icons' />
+                                <Image src={cards.cardIcon} width={50} height={50} alt='Icons' />
                                 <h3 className='mt-5 mb-2 text-2xl font-semibold text-[#c4cfde]'>{cards.cardTitle}</h3>
                                 <p className='text-base mt-3 mb-2 text-[#c4cfde]'>{cards.cardDetail}</p>
                             </div>
